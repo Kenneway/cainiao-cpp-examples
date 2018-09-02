@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+/*********************************************************
+C++允许在char,int和double数据类型前放置修饰符,
+用于改变基本类型的含义
+
+下面列出了数据类型修饰符：
+
+    signed, unsigned, long, short
+
+    int修饰符: signed, unsigned, long, short
+    char修饰符: signed, unsigned
+    double修饰符： long
+
+    long/ short修饰符前缀: signed, unsigned
+
+C++中如果使用了修饰符，int可以缺省。
+只写unsigned, short, unsigned或long, 表示相应修饰下的int类型
+如下面的两个语句都声明了无符号整型变量
+
+    unsigned x;
+    unsigned int y;
+*/
+
+int main()
+{
+    // 有符号短整数
+    short int i;
+    // 无符号短整数
+    short unsigned int j;
+
+    j = 50000;
+
+    i = j;
+    cout << i << " " << j;
+
+    return 0;
+}
+
+/*********************************************************
+类型限定符
+类型限定符提供了变量的额外信息
+
+限定符	    含义
+const	    const类型的对象在程序执行期间不能被修改改变
+volatile	修饰符 volatile 告诉编译器
+            不需要优化volatile声明的变量，
+            让程序可以直接从内存中读取变量。
+            对于一般的变量编译器会对变量进行优化，
+            将内存中的变量值放在寄存器中以加快读写效率。
+restrict	由 restrict 修饰的指针
+            是唯一一种访问它所指向的对象的方式。
+            只有 C99 增加了新的类型限定符 restrict。
+*/
+
