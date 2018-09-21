@@ -1,0 +1,1 @@
+add_executable(14-pointer 14-pointer.cpp)
